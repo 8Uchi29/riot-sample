@@ -2,6 +2,7 @@ var webpack = require('webpack');
 
 module.exports = {
     entry: './browser/index',
+	mode: 'production',
     output: {
 		path: __dirname + '/public',
 		filename: 'bundle.js'
@@ -14,10 +15,7 @@ module.exports = {
 	module: {
 		rules: [
 			{ test: /\.js$|\.tag$|\.riot$/, exclude: /node_modules/, loader: 'babel-loader'},
-			{ test: /\.tag$|\.riot$/, exclude: /node_modules/, loader: 'riotjs-loader', query: {type: 'none'}, enforce: 'pre'}
+			{ test: /\.tag$|\.riot$/, exclude: /node_modules/, loader: 'riotjs-loader', enforce: 'pre'}
 		]
-	},
-	devServer: {
-		contentBase: './public'
 	}
 }
