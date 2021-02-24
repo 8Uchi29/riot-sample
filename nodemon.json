@@ -1,0 +1,9 @@
+{
+	"restabtable": "rs",
+	"env" {
+		"NODE_ENV": "development"
+	},
+	"watch": ["browser"],
+	"ignore": ["tests/**/*.ts|test/**/*.ts"],
+	"exec": "node -r ts-node/registor ./src/index.ts"
+}
